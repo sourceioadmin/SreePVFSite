@@ -81,27 +81,29 @@
   color: var(--color-white);
 }
 
-/* Address / Call Us / Queries tabs — the whole nav+content block sits inside one bordered box on
-   the live site (a 2.4px solid outline in the body-text color), with each tab itself drawn as its
-   own bordered box (adjacent 1px accent-colored borders collapsed via negative margin so they read
-   as dividers, not double lines). */
+/* Address / Call Us / Queries tabs — re-verified against the live site's actual (unminified) CSS
+   source, not just computed styles, after two earlier passes still didn't match. The whole
+   nav+content block sits inside one bordered box; each tab is its own bordered box with a real
+   10px gap between them (never touching/collapsed). Switches on hover — see
+   js/pages/contact-us.js. */
 
 .contact-tabs-box {
-  border: 2.4px solid var(--color-text);
-  padding: var(--space-5) var(--space-4);
+  border: 3px solid var(--color-text);
+  padding: 10px 25px; /* exact measured live-site values, not on the 4/8/16px spacing scale */
 }
 
 .contact-tabs {
   justify-content: center;
   border-bottom: none;
-  margin-bottom: var(--space-5);
+  margin-bottom: 10px;
 }
 
-.contact-tabs .nav-item:not(:first-child) {
-  margin-left: -1px;
+.contact-tabs .nav-item:not(:last-child) {
+  margin-right: 10px;
 }
 
 .contact-tabs .nav-link {
+  position: relative;
   display: flex;
   align-items: center;
   gap: var(--space-2);
@@ -116,41 +118,54 @@
 .contact-tabs .nav-link.active {
   color: var(--color-text);
   background: none;
-  position: relative;
-  border-color: var(--color-text); /* the active tab's box border switches from accent to the
-    body-text color (near-black) on the live site, plus a blue underline bar below it (::after) */
+  /* border stays accent-colored — the live site never switches it to black, active or not */
 }
 
-.contact-tabs .nav-link.active::after {
+/* Active-tab indicator: a thin bar flush inside the bottom border, animated in on activation
+   (matches the live site's scaleX sweep, simplified to one consistent left origin). */
+.contact-tabs .nav-link::before {
   content: '';
   position: absolute;
   left: 0;
   right: 0;
-  bottom: -3px;
-  height: 3px;
-  background: #375FC4;
+  bottom: 0;
+  height: 2px;
+  background: #2575FC;
+  transform: scaleX(0);
+  transition: transform 0.2s;
+}
+
+.contact-tabs .nav-link.active::before {
+  transform: scaleX(1);
 }
 
 .contact-tab-content {
   text-align: center;
+  color: #656565; /* live site's label/static-text gray */
+  font-size: 15px;
 }
 
-.contact-tab-content .tab-eyebrow {
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+.contact-tab-content a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+.contact-tab-content a:hover {
+  color: #685031; /* the live site's generic link-hover color, scoped to this pane only */
+}
+
+.contact-tab-content p {
+  margin-bottom: 10px;
+}
+
+.contact-tab-content p:last-child {
+  margin-bottom: 0;
 }
 
 .contact-tab-content address {
-  text-transform: uppercase;
+  text-transform: uppercase; /* the address text comes from the shared data-address-text hook
+    (proper case, single source of truth) — this transform is what displays it in caps to match
+    the live site, which instead just types the address in caps directly */
   font-style: normal;
-}
-
-.contact-tab-content .tel-list a,
-.contact-tab-content .query-list a {
-  display: block;
-  margin-bottom: var(--space-2);
-}
-
-.contact-tab-content .query-list p {
-  margin-bottom: var(--space-1);
+  margin-bottom: 0;
 }
