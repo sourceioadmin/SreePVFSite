@@ -50,6 +50,14 @@ Same placeholder scheme as above (`images/placeholder.svg` + `data-image-slot`),
 | `founder-sudha-timeline` | Founders — Dr Sudha's career/education timeline graphic (left column, tall ~329×815 image, text baked into the image itself) | `/wp-content/uploads/2023/03/1-2.png` | `founder-sudha-timeline.png` | ✅ |
 | `founder-nageswara-rao-photo` | Founders — Dr. Chadalawada Nageswara Rao portrait (centered, ~279×372) | `/wp-content/uploads/2023/03/Dra.png` | `founder-nageswara-rao-photo.png` | ✅ |
 | `founder-nageswara-rao-timeline` | Founders — Dr. Rao's career/education timeline graphic (left column, tall ~329×815 image, text baked into the image itself) | `/wp-content/uploads/2023/03/Dr-C-Rao-Final.png` | `founder-nageswara-rao-timeline.png` | ✅ |
+| `founder-sudha-membership-acog` | Founders — Dr Sudha's "Memberships in prestigious associations" logo row | `/wp-content/uploads/2023/03/ACOG.png` | `founder-sudha-membership-acog.png` | ✅ |
+| `founder-sudha-membership-royal-college` | Founders — Dr Sudha's "Memberships in prestigious associations" logo row | `/wp-content/uploads/2023/03/Royal.png` | `founder-sudha-membership-royal-college.png` | ✅ |
+| `founder-sudha-membership-fogsi` | Founders — Dr Sudha's "Memberships in prestigious associations" logo row | `/wp-content/uploads/2023/03/FOGSI.png` | `founder-sudha-membership-fogsi.png` | ✅ |
+| `founder-sudha-membership-nyas` | Founders — Dr Sudha's "Memberships in prestigious associations" logo row | `/wp-content/uploads/2023/03/The-New-York.png` | `founder-sudha-membership-nyas.png` | ✅ |
+| `founder-rao-membership-acs` | Founders — Dr. Rao's "Memberships in prestigious associations" logo row | `/wp-content/uploads/2023/03/ACS_Logo.jpeg` | `founder-rao-membership-acs.jpeg` | ✅ |
+| `founder-rao-membership-apsogus` | Founders — Dr. Rao's "Memberships in prestigious associations" logo row | `/wp-content/uploads/2023/03/Logod.png` | `founder-rao-membership-apsogus.png` | ✅ |
+| `founder-rao-membership-royal-college` | Founders — Dr. Rao's "Memberships in prestigious associations" logo row (same Royal College logo as Dr Sudha's row) | `/wp-content/uploads/2023/03/Royal.png` | `founder-rao-membership-royal-college.png` | ✅ |
+| `founder-rao-membership-usi` | Founders — Dr. Rao's "Memberships in prestigious associations" logo row | `/wp-content/uploads/2023/03/Socity.png` | `founder-rao-membership-usi.png` | ✅ |
 | `gallery-photo-001` … `gallery-photo-095` | Picture Gallery — full photo grid (95 distinct photos; see individual rows below) | see individual rows | `gallery-photo-001.ext` … `gallery-photo-095.ext` | see individual rows |
 
 **Videos page note:** `videos.html` embeds the live site's real YouTube videos directly (published

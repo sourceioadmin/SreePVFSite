@@ -46,3 +46,24 @@
 }
 
 /* .info-list (bullet-dot list) has moved to components.css — now used by 3+ pages. */
+
+/* "Memberships in prestigious associations" logo row — the live site shows each org's logo
+   in a plain bordered box, uncropped (these are trademarked logos, not photos to crop/cover). */
+.membership-logos {
+  margin-top: var(--space-4);
+}
+
+.membership-logo-box {
+  border: 3px solid #000;
+  padding: var(--space-4);
+  aspect-ratio: 2 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.membership-logo-box img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
