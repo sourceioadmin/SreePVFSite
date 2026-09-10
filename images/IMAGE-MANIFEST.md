@@ -230,17 +230,7 @@ files.
 | `data-image-slot` | Where it is | Original source (sreepvf.org) | Recommended filename | Confidence |
 |---|---|---|---|---|
 | `research-grants-intro-photo` | Research Grants — intro split-section | `/wp-content/uploads/2023/03/Research-Grant.jpg` (1024×637) | `research-grants-intro-photo.jpg` | ✅ |
-| `biomedical-intro-photo` | Biomedical Science — intro split-section | `/wp-content/uploads/2023/03/Biomedical-1.png` (1024×637) | `biomedical-intro-photo.png` | ✅ |
 | `biomedical-timeline-graphic` | Biomedical Science — "Important Timeline" | `/wp-content/uploads/2025/07/image20250707120638-686b6b154cd59.webp` (1536×934) | `biomedical-timeline-graphic.webp` | ✅ |
-| `committee-chair-photo` | Biomedical Science — Chair (Prof. L S Shashidhara) | `/wp-content/uploads/2023/03/LS1-scaled.jpg` | `committee-chair-photo.jpg` | ✅ |
-| `committee-member-jyotsna-dhawan-photo` | Biomedical Science — committee member | not individually captured | `committee-member-jyotsna-dhawan-photo.jpg` | ⚠️ verify against live page |
-| `committee-member-k-thangaraj-photo` | Biomedical Science — committee member | not individually captured | `committee-member-k-thangaraj-photo.jpg` | ⚠️ verify against live page |
-| `committee-member-radha-rangarajan-photo` | Biomedical Science — committee member | not individually captured | `committee-member-radha-rangarajan-photo.jpg` | ⚠️ verify against live page |
-| `committee-member-venkatasubramanian-ganesan-photo` | Biomedical Science — committee member | not individually captured | `committee-member-venkatasubramanian-ganesan-photo.jpg` | ⚠️ verify against live page |
-| `committee-member-gullapalli-nageswara-rao-photo` | Biomedical Science — committee member | not individually captured | `committee-member-gullapalli-nageswara-rao-photo.jpg` | ⚠️ verify against live page |
-| `committee-secretary-ponnari-gottipati-photo` | Biomedical Science — Secretary | `/wp-content/uploads/2023/03/Poonari-e1719487395670.png` (485×485) | `committee-secretary-ponnari-gottipati-photo.png` | ✅ |
-| `committee-secretary-gayathri-sreedharan-photo` | Biomedical Science — Secretary | not individually captured | `committee-secretary-gayathri-sreedharan-photo.jpg` | ⚠️ verify against live page |
-| `committee-legacy-balasubramanian-photo` through `committee-legacy-swarup-photo` (×6) | Biomedical Science — "Members of the Committee (2019-2023)" slider | shared photo pool with agricultural-science.html's legacy slider, individual files not mapped 1:1 (examples seen: `LS1-scaled-300x300.jpg`, `Dr-Alok-Kalra-300x300.png`) | `committee-legacy-[surname]-photo.jpg` | ⚠️ verify against live page |
 | `agricultural-intro-photo` | Agricultural Science — intro split-section | `/wp-content/uploads/2023/03/Cells.png` | `agricultural-intro-photo.png` | ⚠️ exact displayed dimensions not re-confirmed |
 | `agricultural-timeline-graphic` | Agricultural Science — "Important Timeline" | `/wp-content/uploads/2026/04/image20260415181113-69df8779390e1.webp` (1536×934) | `agricultural-timeline-graphic.webp` | ✅ |
 | `committee-chair-photo-agri` | Agricultural Science — Chair (Prof. Ramesh V. Sonti) | not individually captured | `committee-chair-photo-agri.jpg` | ⚠️ verify against live page |
