@@ -58,7 +58,7 @@ Same placeholder scheme as above (`images/placeholder.svg` + `data-image-slot`),
 | `founder-rao-membership-apsogus` | Founders — Dr. Rao's "Memberships in prestigious associations" logo row | `/wp-content/uploads/2023/03/Logod.png` | `founder-rao-membership-apsogus.png` | ✅ |
 | `founder-rao-membership-royal-college` | Founders — Dr. Rao's "Memberships in prestigious associations" logo row (same Royal College logo as Dr Sudha's row) | `/wp-content/uploads/2023/03/Royal.png` | `founder-rao-membership-royal-college.png` | ✅ |
 | `founder-rao-membership-usi` | Founders — Dr. Rao's "Memberships in prestigious associations" logo row | `/wp-content/uploads/2023/03/Socity.png` | `founder-rao-membership-usi.png` | ✅ |
-| `gallery-photo-001` … `gallery-photo-095` | Picture Gallery — full photo grid (95 distinct photos; see individual rows below) | see individual rows | `gallery-photo-001.ext` … `gallery-photo-095.ext` | see individual rows |
+| `gallery-photo-001` … `gallery-photo-068` | Picture Gallery — carousel (68 of the live site's 95 distinct photos; see note + individual rows below) | see individual rows | `images/picture-gallery/<original-filename>` | see individual rows |
 
 **Videos page note:** `videos.html` embeds the live site's real YouTube videos directly (published
 third-party content, not a missing media asset — see WEBSITE-STANDARDS.md placeholder policy scope).
@@ -68,111 +68,97 @@ Translational Research Grant), `Tlxr5GTE4m0` (AI pest modeling), `n85yEGvbfAc` (
 
 **Picture Gallery — individual photo rows:**
 
-The live gallery renders these 95 photos (a WordPress infinite-loop slider clones a few items at
-the wrap boundary; duplicates have been removed here — verify actual gallery photo count/order
-against the live page before dropping in real files, since re-ordering may have occurred since this
-was captured).
+The live gallery carousel (an Elementor "Image Carousel" / Swiper widget, not a static grid)
+renders 95 distinct photos. 68 of those were supplied in `images/SreePVF Gallery/` and copied into
+`images/picture-gallery/`; the 27 below were not supplied and are **intentionally omitted** from
+the carousel (per explicit direction — folder contents are being used as-is, no downloads) rather
+than left as broken links or placeholders:
+
+`10-400x270.png`, `9-e1680783204121-400x270.png`, `8-e1680783317485-400x270.png`,
+`7-e1680783375433-400x270.png`, `6-e1680783397608-400x270.png`, `5-e1680783414707-400x270.png`,
+`4-e1680783430509-400x270.png`, `3-e1680783444964-400x270.png`, `2-e1680783467280-400x270.png`,
+`1-e1680783483489-400x270.png`, `APJ1-e1680783501910-400x270.png`, `A-1-e1680783540415-400x270.png`,
+`A-e1680783635426-400x270.png`, `B-e1680783619108-400x270.png`, `C-e1680783603836-400x270.png`,
+`D-1-e1680783567397-400x270.png`, `D-e1680783588818-400x270.png`,
+`WhatsApp-Image-2021-07-09-at-12.17.53-PM-1-e1680783657373-400x270.jpeg`,
+`img-20230403-wa0036.webp`, `img-20230403-wa0043.webp`, `img-20230403-wa0063.webp` through
+`img-20230403-wa0069.webp`. If these are later added to `images/SreePVF Gallery/` (or directly to
+`images/picture-gallery/`), insert them at the matching position per the live carousel's real slide
+order (captured via DOM inspection, not alphabetical) and renumber the slots below.
 
 <details>
-<summary>Expand all 95 rows</summary>
+<summary>Expand all 68 rows</summary>
 
-| `data-image-slot` | Where it is | Original source (sreepvf.org) | Recommended filename | Confidence |
+| `data-image-slot` | Where it is | Local file | Original source (sreepvf.org) | Confidence |
 |---|---|---|---|---|
-| `gallery-photo-001` | Picture Gallery grid, photo 1 | `/wp-content/uploads/2023/03/1-e1680783483489-400x270.png` | `gallery-photo-001.png` | ✅ |
-| `gallery-photo-002` | Picture Gallery grid, photo 2 | `/wp-content/uploads/2023/03/10-400x270.png` | `gallery-photo-002.png` | ✅ |
-| `gallery-photo-003` | Picture Gallery grid, photo 3 | `/wp-content/uploads/2023/03/2-e1680783467280-400x270.png` | `gallery-photo-003.png` | ✅ |
-| `gallery-photo-004` | Picture Gallery grid, photo 4 | `/wp-content/uploads/2023/03/3-e1680783444964-400x270.png` | `gallery-photo-004.png` | ✅ |
-| `gallery-photo-005` | Picture Gallery grid, photo 5 | `/wp-content/uploads/2023/03/4-e1680783430509-400x270.png` | `gallery-photo-005.png` | ✅ |
-| `gallery-photo-006` | Picture Gallery grid, photo 6 | `/wp-content/uploads/2023/03/5-e1680783414707-400x270.png` | `gallery-photo-006.png` | ✅ |
-| `gallery-photo-007` | Picture Gallery grid, photo 7 | `/wp-content/uploads/2023/03/6-e1680783397608-400x270.png` | `gallery-photo-007.png` | ✅ |
-| `gallery-photo-008` | Picture Gallery grid, photo 8 | `/wp-content/uploads/2023/03/7-e1680783375433-400x270.png` | `gallery-photo-008.png` | ✅ |
-| `gallery-photo-009` | Picture Gallery grid, photo 9 | `/wp-content/uploads/2023/03/8-e1680783317485-400x270.png` | `gallery-photo-009.png` | ✅ |
-| `gallery-photo-010` | Picture Gallery grid, photo 10 | `/wp-content/uploads/2023/03/9-e1680783204121-400x270.png` | `gallery-photo-010.png` | ✅ |
-| `gallery-photo-011` | Picture Gallery grid, photo 11 | `/wp-content/uploads/2023/03/A-1-e1680783540415-400x270.png` | `gallery-photo-011.png` | ✅ |
-| `gallery-photo-012` | Picture Gallery grid, photo 12 | `/wp-content/uploads/2023/03/A-e1680783635426-400x270.png` | `gallery-photo-012.png` | ✅ |
-| `gallery-photo-013` | Picture Gallery grid, photo 13 | `/wp-content/uploads/2023/03/APJ1-e1680783501910-400x270.png` | `gallery-photo-013.png` | ✅ |
-| `gallery-photo-014` | Picture Gallery grid, photo 14 | `/wp-content/uploads/2023/03/B-e1680783619108-400x270.png` | `gallery-photo-014.png` | ✅ |
-| `gallery-photo-015` | Picture Gallery grid, photo 15 | `/wp-content/uploads/2023/03/C-e1680783603836-400x270.png` | `gallery-photo-015.png` | ✅ |
-| `gallery-photo-016` | Picture Gallery grid, photo 16 | `/wp-content/uploads/2023/03/D-1-e1680783567397-400x270.png` | `gallery-photo-016.png` | ✅ |
-| `gallery-photo-017` | Picture Gallery grid, photo 17 | `/wp-content/uploads/2023/03/D-e1680783588818-400x270.png` | `gallery-photo-017.png` | ✅ |
-| `gallery-photo-018` | Picture Gallery grid, photo 18 | `/wp-content/uploads/2023/03/WhatsApp-Image-2021-07-09-at-12.17.53-PM-1-e1680783657373-400x270.jpeg` | `gallery-photo-018.jpeg` | ✅ |
-| `gallery-photo-019` | Picture Gallery grid, photo 19 | `/wp-content/uploads/2023/04/image20230407112030.webp` | `gallery-photo-019.webp` | ✅ |
-| `gallery-photo-020` | Picture Gallery grid, photo 20 | `/wp-content/uploads/2023/04/img-20230403-wa0013.webp` | `gallery-photo-020.webp` | ✅ |
-| `gallery-photo-021` | Picture Gallery grid, photo 21 | `/wp-content/uploads/2023/04/img-20230403-wa0015.webp` | `gallery-photo-021.webp` | ✅ |
-| `gallery-photo-022` | Picture Gallery grid, photo 22 | `/wp-content/uploads/2023/04/img-20230403-wa0016.webp` | `gallery-photo-022.webp` | ✅ |
-| `gallery-photo-023` | Picture Gallery grid, photo 23 | `/wp-content/uploads/2023/04/img-20230403-wa0017.webp` | `gallery-photo-023.webp` | ✅ |
-| `gallery-photo-024` | Picture Gallery grid, photo 24 | `/wp-content/uploads/2023/04/img-20230403-wa0018.webp` | `gallery-photo-024.webp` | ✅ |
-| `gallery-photo-025` | Picture Gallery grid, photo 25 | `/wp-content/uploads/2023/04/img-20230403-wa0019.webp` | `gallery-photo-025.webp` | ✅ |
-| `gallery-photo-026` | Picture Gallery grid, photo 26 | `/wp-content/uploads/2023/04/img-20230403-wa0020.webp` | `gallery-photo-026.webp` | ✅ |
-| `gallery-photo-027` | Picture Gallery grid, photo 27 | `/wp-content/uploads/2023/04/img-20230403-wa0021.webp` | `gallery-photo-027.webp` | ✅ |
-| `gallery-photo-028` | Picture Gallery grid, photo 28 | `/wp-content/uploads/2023/04/img-20230403-wa0022.webp` | `gallery-photo-028.webp` | ✅ |
-| `gallery-photo-029` | Picture Gallery grid, photo 29 | `/wp-content/uploads/2023/04/img-20230403-wa0023.webp` | `gallery-photo-029.webp` | ✅ |
-| `gallery-photo-030` | Picture Gallery grid, photo 30 | `/wp-content/uploads/2023/04/img-20230403-wa0024.webp` | `gallery-photo-030.webp` | ✅ |
-| `gallery-photo-031` | Picture Gallery grid, photo 31 | `/wp-content/uploads/2023/04/img-20230403-wa0025.webp` | `gallery-photo-031.webp` | ✅ |
-| `gallery-photo-032` | Picture Gallery grid, photo 32 | `/wp-content/uploads/2023/04/img-20230403-wa0026.webp` | `gallery-photo-032.webp` | ✅ |
-| `gallery-photo-033` | Picture Gallery grid, photo 33 | `/wp-content/uploads/2023/04/img-20230403-wa0027.webp` | `gallery-photo-033.webp` | ✅ |
-| `gallery-photo-034` | Picture Gallery grid, photo 34 | `/wp-content/uploads/2023/04/img-20230403-wa0028.webp` | `gallery-photo-034.webp` | ✅ |
-| `gallery-photo-035` | Picture Gallery grid, photo 35 | `/wp-content/uploads/2023/04/img-20230403-wa0029.webp` | `gallery-photo-035.webp` | ✅ |
-| `gallery-photo-036` | Picture Gallery grid, photo 36 | `/wp-content/uploads/2023/04/img-20230403-wa0030.webp` | `gallery-photo-036.webp` | ✅ |
-| `gallery-photo-037` | Picture Gallery grid, photo 37 | `/wp-content/uploads/2023/04/img-20230403-wa0031.webp` | `gallery-photo-037.webp` | ✅ |
-| `gallery-photo-038` | Picture Gallery grid, photo 38 | `/wp-content/uploads/2023/04/img-20230403-wa0032.webp` | `gallery-photo-038.webp` | ✅ |
-| `gallery-photo-039` | Picture Gallery grid, photo 39 | `/wp-content/uploads/2023/04/img-20230403-wa0033.webp` | `gallery-photo-039.webp` | ✅ |
-| `gallery-photo-040` | Picture Gallery grid, photo 40 | `/wp-content/uploads/2023/04/img-20230403-wa0034.webp` | `gallery-photo-040.webp` | ✅ |
-| `gallery-photo-041` | Picture Gallery grid, photo 41 | `/wp-content/uploads/2023/04/img-20230403-wa0035.webp` | `gallery-photo-041.webp` | ✅ |
-| `gallery-photo-042` | Picture Gallery grid, photo 42 | `/wp-content/uploads/2023/04/img-20230403-wa0036.webp` | `gallery-photo-042.webp` | ✅ |
-| `gallery-photo-043` | Picture Gallery grid, photo 43 | `/wp-content/uploads/2023/04/img-20230403-wa0038.webp` | `gallery-photo-043.webp` | ✅ |
-| `gallery-photo-044` | Picture Gallery grid, photo 44 | `/wp-content/uploads/2023/04/img-20230403-wa0040.webp` | `gallery-photo-044.webp` | ✅ |
-| `gallery-photo-045` | Picture Gallery grid, photo 45 | `/wp-content/uploads/2023/04/img-20230403-wa0041.webp` | `gallery-photo-045.webp` | ✅ |
-| `gallery-photo-046` | Picture Gallery grid, photo 46 | `/wp-content/uploads/2023/04/img-20230403-wa0042.webp` | `gallery-photo-046.webp` | ✅ |
-| `gallery-photo-047` | Picture Gallery grid, photo 47 | `/wp-content/uploads/2023/04/img-20230403-wa0043.webp` | `gallery-photo-047.webp` | ✅ |
-| `gallery-photo-048` | Picture Gallery grid, photo 48 | `/wp-content/uploads/2023/04/img-20230403-wa0044.webp` | `gallery-photo-048.webp` | ✅ |
-| `gallery-photo-049` | Picture Gallery grid, photo 49 | `/wp-content/uploads/2023/04/img-20230403-wa0045.webp` | `gallery-photo-049.webp` | ✅ |
-| `gallery-photo-050` | Picture Gallery grid, photo 50 | `/wp-content/uploads/2023/04/img-20230403-wa0046.webp` | `gallery-photo-050.webp` | ✅ |
-| `gallery-photo-051` | Picture Gallery grid, photo 51 | `/wp-content/uploads/2023/04/img-20230403-wa0047.webp` | `gallery-photo-051.webp` | ✅ |
-| `gallery-photo-052` | Picture Gallery grid, photo 52 | `/wp-content/uploads/2023/04/img-20230403-wa0048.webp` | `gallery-photo-052.webp` | ✅ |
-| `gallery-photo-053` | Picture Gallery grid, photo 53 | `/wp-content/uploads/2023/04/img-20230403-wa0049.webp` | `gallery-photo-053.webp` | ✅ |
-| `gallery-photo-054` | Picture Gallery grid, photo 54 | `/wp-content/uploads/2023/04/img-20230403-wa0050.webp` | `gallery-photo-054.webp` | ✅ |
-| `gallery-photo-055` | Picture Gallery grid, photo 55 | `/wp-content/uploads/2023/04/img-20230403-wa0051.webp` | `gallery-photo-055.webp` | ✅ |
-| `gallery-photo-056` | Picture Gallery grid, photo 56 | `/wp-content/uploads/2023/04/img-20230403-wa0052.webp` | `gallery-photo-056.webp` | ✅ |
-| `gallery-photo-057` | Picture Gallery grid, photo 57 | `/wp-content/uploads/2023/04/img-20230403-wa0053.webp` | `gallery-photo-057.webp` | ✅ |
-| `gallery-photo-058` | Picture Gallery grid, photo 58 | `/wp-content/uploads/2023/04/img-20230403-wa0054.webp` | `gallery-photo-058.webp` | ✅ |
-| `gallery-photo-059` | Picture Gallery grid, photo 59 | `/wp-content/uploads/2023/04/img-20230403-wa0055-1.webp` | `gallery-photo-059.webp` | ✅ |
-| `gallery-photo-060` | Picture Gallery grid, photo 60 | `/wp-content/uploads/2023/04/img-20230403-wa0057.webp` | `gallery-photo-060.webp` | ✅ |
-| `gallery-photo-061` | Picture Gallery grid, photo 61 | `/wp-content/uploads/2023/04/img-20230403-wa0058.webp` | `gallery-photo-061.webp` | ✅ |
-| `gallery-photo-062` | Picture Gallery grid, photo 62 | `/wp-content/uploads/2023/04/img-20230403-wa0059.webp` | `gallery-photo-062.webp` | ✅ |
-| `gallery-photo-063` | Picture Gallery grid, photo 63 | `/wp-content/uploads/2023/04/img-20230403-wa0060.webp` | `gallery-photo-063.webp` | ✅ |
-| `gallery-photo-064` | Picture Gallery grid, photo 64 | `/wp-content/uploads/2023/04/img-20230403-wa0061.webp` | `gallery-photo-064.webp` | ✅ |
-| `gallery-photo-065` | Picture Gallery grid, photo 65 | `/wp-content/uploads/2023/04/img-20230403-wa0062.webp` | `gallery-photo-065.webp` | ✅ |
-| `gallery-photo-066` | Picture Gallery grid, photo 66 | `/wp-content/uploads/2023/04/img-20230403-wa0063.webp` | `gallery-photo-066.webp` | ✅ |
-| `gallery-photo-067` | Picture Gallery grid, photo 67 | `/wp-content/uploads/2023/04/img-20230403-wa0064.webp` | `gallery-photo-067.webp` | ✅ |
-| `gallery-photo-068` | Picture Gallery grid, photo 68 | `/wp-content/uploads/2023/04/img-20230403-wa0065.webp` | `gallery-photo-068.webp` | ✅ |
-| `gallery-photo-069` | Picture Gallery grid, photo 69 | `/wp-content/uploads/2023/04/img-20230403-wa0066.webp` | `gallery-photo-069.webp` | ✅ |
-| `gallery-photo-070` | Picture Gallery grid, photo 70 | `/wp-content/uploads/2023/04/img-20230403-wa0067.webp` | `gallery-photo-070.webp` | ✅ |
-| `gallery-photo-071` | Picture Gallery grid, photo 71 | `/wp-content/uploads/2023/04/img-20230403-wa0068.webp` | `gallery-photo-071.webp` | ✅ |
-| `gallery-photo-072` | Picture Gallery grid, photo 72 | `/wp-content/uploads/2023/04/img-20230403-wa0069.webp` | `gallery-photo-072.webp` | ✅ |
-| `gallery-photo-073` | Picture Gallery grid, photo 73 | `/wp-content/uploads/2023/04/img-20230403-wa0070.webp` | `gallery-photo-073.webp` | ✅ |
-| `gallery-photo-074` | Picture Gallery grid, photo 74 | `/wp-content/uploads/2023/04/img-20230403-wa0071.webp` | `gallery-photo-074.webp` | ✅ |
-| `gallery-photo-075` | Picture Gallery grid, photo 75 | `/wp-content/uploads/2023/04/img-20230403-wa0072.webp` | `gallery-photo-075.webp` | ✅ |
-| `gallery-photo-076` | Picture Gallery grid, photo 76 | `/wp-content/uploads/2023/04/img-20230403-wa0073.webp` | `gallery-photo-076.webp` | ✅ |
-| `gallery-photo-077` | Picture Gallery grid, photo 77 | `/wp-content/uploads/2023/04/img-20230403-wa0074.webp` | `gallery-photo-077.webp` | ✅ |
-| `gallery-photo-078` | Picture Gallery grid, photo 78 | `/wp-content/uploads/2023/04/img-20230403-wa0075.webp` | `gallery-photo-078.webp` | ✅ |
-| `gallery-photo-079` | Picture Gallery grid, photo 79 | `/wp-content/uploads/2023/04/img-20230403-wa0076.webp` | `gallery-photo-079.webp` | ✅ |
-| `gallery-photo-080` | Picture Gallery grid, photo 80 | `/wp-content/uploads/2023/04/img-20230403-wa0077.webp` | `gallery-photo-080.webp` | ✅ |
-| `gallery-photo-081` | Picture Gallery grid, photo 81 | `/wp-content/uploads/2023/04/img-20230403-wa0078.webp` | `gallery-photo-081.webp` | ✅ |
-| `gallery-photo-082` | Picture Gallery grid, photo 82 | `/wp-content/uploads/2023/04/img-20230403-wa0079.webp` | `gallery-photo-082.webp` | ✅ |
-| `gallery-photo-083` | Picture Gallery grid, photo 83 | `/wp-content/uploads/2023/04/img-20230403-wa0080.webp` | `gallery-photo-083.webp` | ✅ |
-| `gallery-photo-084` | Picture Gallery grid, photo 84 | `/wp-content/uploads/2023/04/img-20230403-wa0081.webp` | `gallery-photo-084.webp` | ✅ |
-| `gallery-photo-085` | Picture Gallery grid, photo 85 | `/wp-content/uploads/2023/04/img-20230403-wa0082.webp` | `gallery-photo-085.webp` | ✅ |
-| `gallery-photo-086` | Picture Gallery grid, photo 86 | `/wp-content/uploads/2023/04/img-20230403-wa0083.webp` | `gallery-photo-086.webp` | ✅ |
-| `gallery-photo-087` | Picture Gallery grid, photo 87 | `/wp-content/uploads/2023/04/img-20230403-wa0084.webp` | `gallery-photo-087.webp` | ✅ |
-| `gallery-photo-088` | Picture Gallery grid, photo 88 | `/wp-content/uploads/2023/04/img-20230403-wa0085.webp` | `gallery-photo-088.webp` | ✅ |
-| `gallery-photo-089` | Picture Gallery grid, photo 89 | `/wp-content/uploads/2023/04/img-20230403-wa0086.webp` | `gallery-photo-089.webp` | ✅ |
-| `gallery-photo-090` | Picture Gallery grid, photo 90 | `/wp-content/uploads/2023/04/img-20230403-wa0087.webp` | `gallery-photo-090.webp` | ✅ |
-| `gallery-photo-091` | Picture Gallery grid, photo 91 | `/wp-content/uploads/2023/04/img-20230403-wa0088.webp` | `gallery-photo-091.webp` | ✅ |
-| `gallery-photo-092` | Picture Gallery grid, photo 92 | `/wp-content/uploads/2023/04/img-20230403-wa0089.webp` | `gallery-photo-092.webp` | ✅ |
-| `gallery-photo-093` | Picture Gallery grid, photo 93 | `/wp-content/uploads/2023/04/img-20230403-wa0090.webp` | `gallery-photo-093.webp` | ✅ |
-| `gallery-photo-094` | Picture Gallery grid, photo 94 | `/wp-content/uploads/2023/04/img-20230403-wa0091.webp` | `gallery-photo-094.webp` | ✅ |
-| `gallery-photo-095` | Picture Gallery grid, photo 95 | `/wp-content/uploads/2023/04/img-20230403-wa0092.webp` | `gallery-photo-095.webp` | ✅ |
+| `gallery-photo-001` | Picture Gallery carousel, photo 1 | `images/picture-gallery/img-20230403-wa0052.webp` | — | ✅ |
+| `gallery-photo-002` | Picture Gallery carousel, photo 2 | `images/picture-gallery/img-20230403-wa0053.webp` | — | ✅ |
+| `gallery-photo-003` | Picture Gallery carousel, photo 3 | `images/picture-gallery/img-20230403-wa0054.webp` | — | ✅ |
+| `gallery-photo-004` | Picture Gallery carousel, photo 4 | `images/picture-gallery/img-20230403-wa0055-1.webp` | — | ✅ |
+| `gallery-photo-005` | Picture Gallery carousel, photo 5 | `images/picture-gallery/img-20230403-wa0057.webp` | — | ✅ |
+| `gallery-photo-006` | Picture Gallery carousel, photo 6 | `images/picture-gallery/img-20230403-wa0058.webp` | — | ✅ |
+| `gallery-photo-007` | Picture Gallery carousel, photo 7 | `images/picture-gallery/img-20230403-wa0059.webp` | — | ✅ |
+| `gallery-photo-008` | Picture Gallery carousel, photo 8 | `images/picture-gallery/img-20230403-wa0060.webp` | — | ✅ |
+| `gallery-photo-009` | Picture Gallery carousel, photo 9 | `images/picture-gallery/img-20230403-wa0061.webp` | — | ✅ |
+| `gallery-photo-010` | Picture Gallery carousel, photo 10 | `images/picture-gallery/img-20230403-wa0062.webp` | — | ✅ |
+| `gallery-photo-011` | Picture Gallery carousel, photo 11 | `images/picture-gallery/img-20230403-wa0070.webp` | — | ✅ |
+| `gallery-photo-012` | Picture Gallery carousel, photo 12 | `images/picture-gallery/img-20230403-wa0071.webp` | — | ✅ |
+| `gallery-photo-013` | Picture Gallery carousel, photo 13 | `images/picture-gallery/img-20230403-wa0072.webp` | — | ✅ |
+| `gallery-photo-014` | Picture Gallery carousel, photo 14 | `images/picture-gallery/img-20230403-wa0073.webp` | — | ✅ |
+| `gallery-photo-015` | Picture Gallery carousel, photo 15 | `images/picture-gallery/img-20230403-wa0074.webp` | — | ✅ |
+| `gallery-photo-016` | Picture Gallery carousel, photo 16 | `images/picture-gallery/img-20230403-wa0075.webp` | — | ✅ |
+| `gallery-photo-017` | Picture Gallery carousel, photo 17 | `images/picture-gallery/img-20230403-wa0076.webp` | — | ✅ |
+| `gallery-photo-018` | Picture Gallery carousel, photo 18 | `images/picture-gallery/img-20230403-wa0077.webp` | — | ✅ |
+| `gallery-photo-019` | Picture Gallery carousel, photo 19 | `images/picture-gallery/img-20230403-wa0078.webp` | — | ✅ |
+| `gallery-photo-020` | Picture Gallery carousel, photo 20 | `images/picture-gallery/img-20230403-wa0079.webp` | — | ✅ |
+| `gallery-photo-021` | Picture Gallery carousel, photo 21 | `images/picture-gallery/img-20230403-wa0080.webp` | — | ✅ |
+| `gallery-photo-022` | Picture Gallery carousel, photo 22 | `images/picture-gallery/img-20230403-wa0081.webp` | — | ✅ |
+| `gallery-photo-023` | Picture Gallery carousel, photo 23 | `images/picture-gallery/img-20230403-wa0082.webp` | — | ✅ |
+| `gallery-photo-024` | Picture Gallery carousel, photo 24 | `images/picture-gallery/img-20230403-wa0083.webp` | — | ✅ |
+| `gallery-photo-025` | Picture Gallery carousel, photo 25 | `images/picture-gallery/img-20230403-wa0084.webp` | — | ✅ |
+| `gallery-photo-026` | Picture Gallery carousel, photo 26 | `images/picture-gallery/img-20230403-wa0085.webp` | — | ✅ |
+| `gallery-photo-027` | Picture Gallery carousel, photo 27 | `images/picture-gallery/img-20230403-wa0086.webp` | — | ✅ |
+| `gallery-photo-028` | Picture Gallery carousel, photo 28 | `images/picture-gallery/img-20230403-wa0087.webp` | — | ✅ |
+| `gallery-photo-029` | Picture Gallery carousel, photo 29 | `images/picture-gallery/img-20230403-wa0088.webp` | — | ✅ |
+| `gallery-photo-030` | Picture Gallery carousel, photo 30 | `images/picture-gallery/img-20230403-wa0089.webp` | — | ✅ |
+| `gallery-photo-031` | Picture Gallery carousel, photo 31 | `images/picture-gallery/img-20230403-wa0090.webp` | — | ✅ |
+| `gallery-photo-032` | Picture Gallery carousel, photo 32 | `images/picture-gallery/img-20230403-wa0091.webp` | — | ✅ |
+| `gallery-photo-033` | Picture Gallery carousel, photo 33 | `images/picture-gallery/img-20230403-wa0092.webp` | — | ✅ |
+| `gallery-photo-034` | Picture Gallery carousel, photo 34 | `images/picture-gallery/img-20230403-wa0013.webp` | — | ✅ |
+| `gallery-photo-035` | Picture Gallery carousel, photo 35 | `images/picture-gallery/img-20230403-wa0015.webp` | — | ✅ |
+| `gallery-photo-036` | Picture Gallery carousel, photo 36 | `images/picture-gallery/img-20230403-wa0046.webp` | — | ✅ |
+| `gallery-photo-037` | Picture Gallery carousel, photo 37 | `images/picture-gallery/img-20230403-wa0047.webp` | — | ✅ |
+| `gallery-photo-038` | Picture Gallery carousel, photo 38 | `images/picture-gallery/img-20230403-wa0048.webp` | — | ✅ |
+| `gallery-photo-039` | Picture Gallery carousel, photo 39 | `images/picture-gallery/img-20230403-wa0049.webp` | — | ✅ |
+| `gallery-photo-040` | Picture Gallery carousel, photo 40 | `images/picture-gallery/img-20230403-wa0050.webp` | — | ✅ |
+| `gallery-photo-041` | Picture Gallery carousel, photo 41 | `images/picture-gallery/img-20230403-wa0051.webp` | — | ✅ |
+| `gallery-photo-042` | Picture Gallery carousel, photo 42 | `images/picture-gallery/image20230407112030.webp` | — | ✅ |
+| `gallery-photo-043` | Picture Gallery carousel, photo 43 | `images/picture-gallery/img-20230403-wa0016.webp` | — | ✅ |
+| `gallery-photo-044` | Picture Gallery carousel, photo 44 | `images/picture-gallery/img-20230403-wa0017.webp` | — | ✅ |
+| `gallery-photo-045` | Picture Gallery carousel, photo 45 | `images/picture-gallery/img-20230403-wa0018.webp` | — | ✅ |
+| `gallery-photo-046` | Picture Gallery carousel, photo 46 | `images/picture-gallery/img-20230403-wa0019.webp` | — | ✅ |
+| `gallery-photo-047` | Picture Gallery carousel, photo 47 | `images/picture-gallery/img-20230403-wa0020.webp` | — | ✅ |
+| `gallery-photo-048` | Picture Gallery carousel, photo 48 | `images/picture-gallery/img-20230403-wa0021.webp` | — | ✅ |
+| `gallery-photo-049` | Picture Gallery carousel, photo 49 | `images/picture-gallery/img-20230403-wa0022.webp` | — | ✅ |
+| `gallery-photo-050` | Picture Gallery carousel, photo 50 | `images/picture-gallery/img-20230403-wa0023.webp` | — | ✅ |
+| `gallery-photo-051` | Picture Gallery carousel, photo 51 | `images/picture-gallery/img-20230403-wa0024.webp` | — | ✅ |
+| `gallery-photo-052` | Picture Gallery carousel, photo 52 | `images/picture-gallery/img-20230403-wa0025.webp` | — | ✅ |
+| `gallery-photo-053` | Picture Gallery carousel, photo 53 | `images/picture-gallery/img-20230403-wa0026.webp` | — | ✅ |
+| `gallery-photo-054` | Picture Gallery carousel, photo 54 | `images/picture-gallery/img-20230403-wa0032.webp` | — | ✅ |
+| `gallery-photo-055` | Picture Gallery carousel, photo 55 | `images/picture-gallery/img-20230403-wa0031.webp` | — | ✅ |
+| `gallery-photo-056` | Picture Gallery carousel, photo 56 | `images/picture-gallery/img-20230403-wa0030.webp` | — | ✅ |
+| `gallery-photo-057` | Picture Gallery carousel, photo 57 | `images/picture-gallery/img-20230403-wa0029.webp` | — | ✅ |
+| `gallery-photo-058` | Picture Gallery carousel, photo 58 | `images/picture-gallery/img-20230403-wa0028.webp` | — | ✅ |
+| `gallery-photo-059` | Picture Gallery carousel, photo 59 | `images/picture-gallery/img-20230403-wa0027.webp` | — | ✅ |
+| `gallery-photo-060` | Picture Gallery carousel, photo 60 | `images/picture-gallery/img-20230403-wa0033.webp` | — | ✅ |
+| `gallery-photo-061` | Picture Gallery carousel, photo 61 | `images/picture-gallery/img-20230403-wa0034.webp` | — | ✅ |
+| `gallery-photo-062` | Picture Gallery carousel, photo 62 | `images/picture-gallery/img-20230403-wa0035.webp` | — | ✅ |
+| `gallery-photo-063` | Picture Gallery carousel, photo 63 | `images/picture-gallery/img-20230403-wa0038.webp` | — | ✅ |
+| `gallery-photo-064` | Picture Gallery carousel, photo 64 | `images/picture-gallery/img-20230403-wa0045.webp` | — | ✅ |
+| `gallery-photo-065` | Picture Gallery carousel, photo 65 | `images/picture-gallery/img-20230403-wa0044.webp` | — | ✅ |
+| `gallery-photo-066` | Picture Gallery carousel, photo 66 | `images/picture-gallery/img-20230403-wa0042.webp` | — | ✅ |
+| `gallery-photo-067` | Picture Gallery carousel, photo 67 | `images/picture-gallery/img-20230403-wa0041.webp` | — | ✅ |
+| `gallery-photo-068` | Picture Gallery carousel, photo 68 | `images/picture-gallery/img-20230403-wa0040.webp` | — | ✅ |
 
 </details>
 
