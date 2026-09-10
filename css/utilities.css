@@ -5,7 +5,7 @@
    SVG fails to load, and forces a sane aspect box so layout doesn't collapse. */
 .img-placeholder {
   background: var(--color-placeholder-bg);
-  border: 1px dashed var(--color-placeholder-border);
+  /* border: 1px dashed var(--color-placeholder-border); */
   object-fit: cover;
 }
 

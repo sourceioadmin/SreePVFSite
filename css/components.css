@@ -110,7 +110,7 @@
 }
 
 .award-entry .award-photo {
-  width: 100%;
+  width: 50%;
   aspect-ratio: 248 / 245;
   object-fit: cover;
 }
