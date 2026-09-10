@@ -45,23 +45,4 @@
   margin-top: var(--space-5);
 }
 
-.info-list li {
-  position: relative;
-  padding-left: var(--space-4);
-  margin-bottom: var(--space-3);
-}
-
-.info-list li::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 10px;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--color-accent);
-}
-
-.info-list strong {
-  color: var(--color-text);
-}
+/* .info-list (bullet-dot list) has moved to components.css — now used by 3+ pages. */

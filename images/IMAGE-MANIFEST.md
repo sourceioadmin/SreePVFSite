@@ -219,6 +219,62 @@ pages are out of scope for this pass — names are rendered as plain (non-link) 
 `biomedical-awards.html`/`agricultural-awards.html` rather than pointing at pages that don't exist
 yet. Revisit if/when those detail pages get built.
 
+## Image manifest — Research Grants / Biomedical Science / Agricultural Science pages
+
+Same placeholder scheme as above, for `research-grants.html`, `biomedical-science.html`, and
+`agricultural-science.html`. All three also use the shared `subpage-hero-bg` slot. A live-site
+investigation reached the limits of what it could individually confirm for several committee-member
+photos (marked ⚠️ below) — worth a follow-up pass against the live pages before dropping in real
+files.
+
+| `data-image-slot` | Where it is | Original source (sreepvf.org) | Recommended filename | Confidence |
+|---|---|---|---|---|
+| `research-grants-intro-photo` | Research Grants — intro split-section | `/wp-content/uploads/2023/03/Research-Grant.jpg` (1024×637) | `research-grants-intro-photo.jpg` | ✅ |
+| `biomedical-intro-photo` | Biomedical Science — intro split-section | `/wp-content/uploads/2023/03/Biomedical-1.png` (1024×637) | `biomedical-intro-photo.png` | ✅ |
+| `biomedical-timeline-graphic` | Biomedical Science — "Important Timeline" | `/wp-content/uploads/2025/07/image20250707120638-686b6b154cd59.webp` (1536×934) | `biomedical-timeline-graphic.webp` | ✅ |
+| `committee-chair-photo` | Biomedical Science — Chair (Prof. L S Shashidhara) | `/wp-content/uploads/2023/03/LS1-scaled.jpg` | `committee-chair-photo.jpg` | ✅ |
+| `committee-member-jyotsna-dhawan-photo` | Biomedical Science — committee member | not individually captured | `committee-member-jyotsna-dhawan-photo.jpg` | ⚠️ verify against live page |
+| `committee-member-k-thangaraj-photo` | Biomedical Science — committee member | not individually captured | `committee-member-k-thangaraj-photo.jpg` | ⚠️ verify against live page |
+| `committee-member-radha-rangarajan-photo` | Biomedical Science — committee member | not individually captured | `committee-member-radha-rangarajan-photo.jpg` | ⚠️ verify against live page |
+| `committee-member-venkatasubramanian-ganesan-photo` | Biomedical Science — committee member | not individually captured | `committee-member-venkatasubramanian-ganesan-photo.jpg` | ⚠️ verify against live page |
+| `committee-member-gullapalli-nageswara-rao-photo` | Biomedical Science — committee member | not individually captured | `committee-member-gullapalli-nageswara-rao-photo.jpg` | ⚠️ verify against live page |
+| `committee-secretary-ponnari-gottipati-photo` | Biomedical Science — Secretary | `/wp-content/uploads/2023/03/Poonari-e1719487395670.png` (485×485) | `committee-secretary-ponnari-gottipati-photo.png` | ✅ |
+| `committee-secretary-gayathri-sreedharan-photo` | Biomedical Science — Secretary | not individually captured | `committee-secretary-gayathri-sreedharan-photo.jpg` | ⚠️ verify against live page |
+| `committee-legacy-balasubramanian-photo` through `committee-legacy-swarup-photo` (×6) | Biomedical Science — "Members of the Committee (2019-2023)" slider | shared photo pool with agricultural-science.html's legacy slider, individual files not mapped 1:1 (examples seen: `LS1-scaled-300x300.jpg`, `Dr-Alok-Kalra-300x300.png`) | `committee-legacy-[surname]-photo.jpg` | ⚠️ verify against live page |
+| `agricultural-intro-photo` | Agricultural Science — intro split-section | `/wp-content/uploads/2023/03/Cells.png` | `agricultural-intro-photo.png` | ⚠️ exact displayed dimensions not re-confirmed |
+| `agricultural-timeline-graphic` | Agricultural Science — "Important Timeline" | `/wp-content/uploads/2026/04/image20260415181113-69df8779390e1.webp` (1536×934) | `agricultural-timeline-graphic.webp` | ✅ |
+| `committee-chair-photo-agri` | Agricultural Science — Chair (Prof. Ramesh V. Sonti) | not individually captured | `committee-chair-photo-agri.jpg` | ⚠️ verify against live page |
+| `committee-agri-current-shashidhara-photo` | Agricultural Science — "Members (2025 Onwards)" slider | shares `LS1`-family photo with `committee-chair-photo` — verify | `committee-agri-current-shashidhara-photo.jpg` | ⚠️ verify against live page |
+| `committee-agri-current-sujatha-photo` | Agricultural Science — "Members (2025 Onwards)" slider | not individually captured | `committee-agri-current-sujatha-photo.jpg` | ⚠️ verify against live page |
+| `committee-agri-current-kalra-photo` | Agricultural Science — "Members (2025 Onwards)" slider | `/wp-content/uploads/.../Dr-Alok-Kalra-300x300.png` | `committee-agri-current-kalra-photo.png` | ✅ |
+| `committee-agri-current-sreeman-photo` | Agricultural Science — "Members (2025 Onwards)" slider | `professor-sheshshayee-sreeman-…webp` (exact path not fully captured) | `committee-agri-current-sreeman-photo.webp` | ⚠️ verify against live page |
+| `committee-agri-current-sudharani-photo` | Agricultural Science — "Members (2025 Onwards)" slider | `Professor-V-Sudharani-300x300.webp` (exact path not fully captured) | `committee-agri-current-sudharani-photo.webp` | ⚠️ verify against live page |
+| `committee-agri-legacy-1-photo` | Agricultural Science — "Members of the Committee (2021-2024)" slider | **not captured at all** — the investigation confirmed this slider exists but didn't enumerate its members; only one placeholder slide was built pending a follow-up pass | `committee-agri-legacy-[surname]-photo.jpg` | ⚠️ needs a dedicated re-check of this slider's full member list before launch |
+| `committee-staff-ponnari-gottipati-photo` | Agricultural Science — Staff | not individually captured | `committee-staff-ponnari-gottipati-photo.jpg` | ⚠️ verify against live page |
+| `committee-staff-amit-das-photo` | Agricultural Science — Staff | not individually captured | `committee-staff-amit-das-photo.jpg` | ⚠️ verify against live page |
+| `committee-staff-gayathri-sreedharan-photo` | Agricultural Science — Staff | not individually captured | `committee-staff-gayathri-sreedharan-photo.jpg` | ⚠️ verify against live page |
+
+**Non-image downloadable files** (Terms &amp; Conditions PDF, preliminary-application forms) — hrefs
+are `#` in the pages above until the real files are downloaded and dropped in, matching the
+Essay Contests PDF pattern:
+
+| `data-pdf-slot` / `data-download-slot` | Source (sreepvf.org) |
+|---|---|
+| `biomedical-terms-conditions-pdf`, `agricultural-terms-conditions-pdf` | `https://sreepvf.org/wp-content/uploads/2026/03/Sree-PVF_Grant-TC-Agreement_Jan-2026_v1.pdf` (same file, used on both pages) |
+| `biomedical-preliminary-application-doc` | `https://sreepvf.org/wp-content/uploads/2025/07/SreePVF-Preliminary-Application-Form.doc` |
+| `agricultural-preliminary-application-pptx` | `https://sreepvf.org/wp-content/uploads/2026/03/Preliminary-application-format_Sree-PVF-Grants-for-Agriculture-2026.pptx` |
+
+**Note on "Previous Awardees"/"Awardees" years:** same as the Biomedical/Agricultural Awards pages
+— each year links to a per-year detail page on the live site that's out of scope for this
+migration pass, so years render as plain bold text here rather than dead links.
+
+**Note on dead/hidden content:** the live `research-grants.html` page contains a large block of
+"Biomedical Sciences"/"Agricultural Sciences" write-up content (intro text, evaluation process,
+full committee rosters) that carries `elementor-hidden-desktop/tablet/mobile` on every wrapper —
+i.e. it's permanently hidden at every breakpoint and never rendered for real visitors. This was
+deliberately **not** reproduced, per WEBSITE-STANDARDS.md's warning against replicating dead
+leftover markup.
+
 ## How to replace a placeholder
 
 1. Save the real file into `images/` using the recommended filename above (or your own — just keep it

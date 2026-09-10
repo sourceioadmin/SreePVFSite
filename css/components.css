@@ -130,6 +130,164 @@
   margin: 0;
 }
 
+/* Committee group label — "Chair" / "Members of the Committee (...)" / "Secretary:" sub-headings
+   above each committee-card row. Used on Research Grants / Biomedical Science / Agricultural
+   Science (3+ pages). */
+
+.committee-group-label {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: var(--space-4);
+}
+
+/* Committee card — square/uncropped photo + centered accent-colored name + centered black caption.
+   Used on Research Grants / Biomedical Science / Agricultural Science (3+ pages) for selection-
+   committee rosters. Distinct from the homepage's circular .team-member avatars. */
+
+.committee-card {
+  text-align: center;
+}
+
+.committee-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  margin-bottom: var(--space-3);
+}
+
+.committee-card h3 {
+  color: var(--color-accent);
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: var(--space-1);
+  overflow-wrap: break-word; /* long unbroken names (e.g. "Venkatasubramanian") otherwise widen
+    the narrow 2-per-row mobile column past the viewport */
+}
+
+.committee-card p {
+  color: #000;
+  font-size: 15px;
+  margin: 0;
+}
+
+/* Legacy-committee carousel slide — same idea as .committee-card but for the "past committee"
+   sliders, photo + caption stacked below it, one member per slide. */
+
+.committee-slide {
+  text-align: center;
+}
+
+.committee-slide img {
+  width: 300px;
+  max-width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  margin: 0 auto var(--space-3);
+}
+
+.committee-slide h3 {
+  color: var(--color-accent);
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: var(--space-1);
+  overflow-wrap: break-word;
+}
+
+.committee-slide p {
+  color: #000;
+  font-size: 15px;
+  margin: 0;
+}
+
+/* CTA accent box — full-width solid-accent "for queries write to" prompt. Used on Research
+   Grants / Biomedical Science / Agricultural Science. */
+
+.cta-accent-box {
+  background: var(--color-accent);
+  color: var(--color-white);
+  text-align: center;
+  padding: var(--space-6) var(--space-5);
+}
+
+.cta-accent-box h3 {
+  color: var(--color-white);
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: var(--space-2);
+}
+
+.cta-accent-box a {
+  color: var(--color-white);
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+/* Grant accordion — reuses Bootstrap's own .accordion component (already loaded); this just
+   nudges it toward the live site's look (bolder titles, square corners, no shadow). Panels
+   deliberately don't share a data-bs-parent in the markup, so more than one can stay open at
+   once, matching the live Elementor "Toggle" widget's behavior. */
+
+.grant-accordion .accordion-item {
+  border-radius: 0;
+  border-color: var(--color-border);
+}
+
+.grant-accordion .accordion-button {
+  font-weight: 700;
+  border-radius: 0 !important; /* Bootstrap's own accordion-button hardcodes radius on the first
+    item via !important internally — matched here so corners stay square throughout */
+}
+
+.grant-accordion .accordion-button:not(.collapsed) {
+  color: var(--color-text);
+  background: var(--color-white);
+  box-shadow: none;
+}
+
+/* Standalone video embed frame — a 16:9 box for a real <iframe> embed, used stand-alone (not
+   inside .video-purpose-row, which has its own scoped version in layout.css for the homepage
+   thumbnail). Used on Videos and Biomedical Science (2+ pages). */
+
+.video-frame {
+  position: relative;
+  padding-top: 56.25%;
+  overflow: hidden;
+}
+
+.video-frame iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Bulleted list with a small accent-colored dot marker — base.css strips default <ul> bullets
+   sitewide, so anywhere a real bulleted list is needed (Founders' Established/Awards lists,
+   Biomedical/Agricultural Science's accordion and Objective-of-the-Call lists) uses this instead
+   of relying on browser-default list-style. Used on 3+ pages. */
+
+.info-list li {
+  position: relative;
+  padding-left: var(--space-4);
+  margin-bottom: var(--space-3);
+}
+
+.info-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-accent);
+}
+
+.info-list strong {
+  color: var(--color-text);
+}
+
 /* Announcement ticker badge already covered in layout.css (.ticker-badge) */
 
 /* Read More link used inside cards */
