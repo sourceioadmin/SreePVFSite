@@ -277,6 +277,17 @@ i.e. it's permanently hidden at every breakpoint and never rendered for real vis
 deliberately **not** reproduced, per WEBSITE-STANDARDS.md's warning against replicating dead
 leftover markup.
 
+## Image manifest — Blog page
+
+| `blog-post-1-image` | Blog — "Translation Accelerator – Day 2 Plenary" card thumbnail | `/wp-content/uploads/2026/09/day-2-plenary-6aa1123b702fa-212x300.webp` (same asset as the homepage's `news-card-1-image`) | `blog/day-2-plenary.webp` | ✅ |
+| `blog-post-2-image` | Blog — "Translation Accelerator – Day 1 Plenary" card thumbnail | `/wp-content/uploads/2026/09/day-1-plenary-6aa1121e01d16-212x300.webp` (same asset as the homepage's `news-card-2-image`) | `blog/day-1-plenary.webp` | ✅ |
+| `blog-post-3-image` | Blog — Prof. Sachin Mandavgane / P. K. Bose award card thumbnail | `/wp-content/uploads/2026/09/sachin-pk-bose-memorial-award-6a96a632aec7f-212x300.webp` (same asset as the homepage's `news-card-3-image`) | `blog/sachin-pk-bose-memorial-award.webp` | ✅ |
+| (author avatar, all 4 cards) | Blog — "devadmin" author avatar (Gravatar, reused on every card) | `https://secure.gravatar.com/avatar/03ef8490d1df7606dcac3cf3be9c9881d20666d79300a5484140459f62f9831d?s=96&d=mm&r=g` | `blog/author-devadmin-avatar.jpg` | ✅ |
+
+Note: the live site's 4th blog post ("SreePVF is organising the Translation Accelerator Meeting
+this year at NCBS.") genuinely has no featured image — confirmed via DOM inspection, not an
+oversight — so its card is reproduced without a thumbnail.
+
 ## How to replace a placeholder
 
 1. Save the real file into `images/` using the recommended filename above (or your own — just keep it

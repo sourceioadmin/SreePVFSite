@@ -1,0 +1,137 @@
+/* css/pages/blog.css — page-unique overrides for blog.html.
+   The live site's blog listing is a plain, unstyled WordPress/Elementor post grid (no card
+   border, shadow or radius) plus a sidebar with Search / Recent Posts / Recent Comments widgets —
+   captured via computed styles directly off https://sreepvf.org/blog/. */
+
+.blog-card {
+  padding: 10px;
+}
+
+.blog-card-thumb {
+  aspect-ratio: 212 / 300;
+  max-width: 212px;
+  overflow: hidden;
+  margin-bottom: var(--space-2);
+}
+
+.blog-card-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.blog-card-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: rgb(40, 40, 40);
+  margin: 10px 0 5px;
+}
+
+.blog-card-title a {
+  color: inherit;
+}
+
+.blog-card-excerpt {
+  font-size: 15px;
+  color: var(--color-text);
+}
+
+.blog-card-excerpt p {
+  display: inline;
+  margin: 0;
+}
+
+/* The live site's "Read More" is a plain WordPress-theme link — its blue (#000bec) is the
+   theme's default link color, not the SreePVF brand accent, so it's intentionally not reusing
+   var(--color-accent) here. */
+.blog-card-readmore {
+  color: #000bec;
+  font-size: 12px;
+  font-weight: 500;
+  margin-left: var(--space-2);
+}
+
+.blog-card-footer {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+}
+
+.blog-card-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.blog-card-author,
+.blog-card-date {
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+
+.blog-card-author {
+  font-weight: 600;
+}
+
+/* ---------- Sidebar ---------- */
+
+.blog-sidebar .sidebar-widget {
+  border: 1px solid var(--color-border);
+  padding: var(--space-4);
+  margin-bottom: var(--space-4);
+}
+
+.sidebar-widget-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: var(--space-3);
+}
+
+.sidebar-search-label {
+  display: block;
+  font-size: 15px;
+  margin-bottom: var(--space-2);
+}
+
+.sidebar-search-form {
+  display: flex;
+}
+
+.sidebar-search-input {
+  flex: 1 1 auto;
+  border: 1px solid var(--color-border);
+  padding: var(--space-2) var(--space-3);
+}
+
+.sidebar-search-button {
+  background: #000;
+  color: var(--color-white);
+  border: none;
+  padding: var(--space-2) var(--space-4);
+}
+
+.sidebar-post-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-post-list li {
+  margin-bottom: var(--space-3);
+}
+
+.sidebar-post-list li:last-child {
+  margin-bottom: 0;
+}
+
+.sidebar-post-list a {
+  color: var(--color-text);
+}
+
+.sidebar-no-comments {
+  font-size: 15px;
+  color: var(--color-text-muted);
+  margin: 0;
+}
