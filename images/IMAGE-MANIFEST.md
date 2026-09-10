@@ -168,6 +168,57 @@ was captured).
 
 </details>
 
+## Image manifest — Biomedical Awards / Agricultural Awards / SreePVF Essay Contests pages
+
+Same placeholder scheme as above, for `biomedical-awards.html`, `agricultural-awards.html`, and
+`sreepvf-essay-contests.html`. All three also use the shared `subpage-hero-bg` slot (see first table).
+
+| `data-image-slot` | Where it is | Original source (sreepvf.org) | Recommended filename | Confidence |
+|---|---|---|---|---|
+| `biomed-award-2019-vaidya-photo` | Biomedical Awards — Prof. Vidita Vaidya, 2019 | `/wp-content/uploads/2023/03/Image20230313125204.jpg` (248×245) | `biomed-award-2019-vaidya-photo.jpg` | ✅ |
+| `biomed-award-2020-sharma-photo` | Biomedical Awards — Dr. Vandana Sharma, 2020 | `/wp-content/uploads/2023/03/Image20230313125220.jpg` | `biomed-award-2020-sharma-photo.jpg` | ✅ |
+| `biomed-award-2021-pati-photo` | Biomedical Awards — Dr. Falguni Pati, 2021 | `/wp-content/uploads/2023/03/Image20230313125227.jpg` | `biomed-award-2021-pati-photo.jpg` | ✅ |
+| `biomed-award-2022-chaturvedi-photo` | Biomedical Awards — Dr. Akanksha Chaturvedi, 2022 | `/wp-content/uploads/2023/03/Image20230313125230.jpg` | `biomed-award-2022-chaturvedi-photo.jpg` | ✅ |
+| `biomed-award-2022-padhi-photo` | Biomedical Awards — Prof. Radhakant Padhi, 2022 | `/wp-content/uploads/2023/03/Image20230313125223.jpg` | `biomed-award-2022-padhi-photo.jpg` | ✅ |
+| `biomed-award-2023-ghosh-photo` | Biomedical Awards — Dr. Ambarish Ghosh, 2023 | `/wp-content/uploads/2024/04/image20240403154207-660d2b961d3b9.webp` | `biomed-award-2023-ghosh-photo.webp` | ✅ |
+| `biomed-award-2023-ramkumar-photo` | Biomedical Awards — Dr. Vidya Ramkumar, 2023 | `/wp-content/uploads/2024/04/image20240403154211-660d2b95e28fa.webp` | `biomed-award-2023-ramkumar-photo.webp` | ✅ |
+| `biomed-award-2024-giri-photo` | Biomedical Awards — Dr. Jyotsnendu Giri, 2024 | `/wp-content/uploads/2025/04/1-680ccc9d30590.webp` | `biomed-award-2024-giri-photo.webp` | ✅ |
+| `biomed-award-2024-anirudhan-photo` | Biomedical Awards — Dr Arun Anirudhan V, 2024 | `/wp-content/uploads/2025/04/2-680ccca1cdc15.webp` | `biomed-award-2024-anirudhan-photo.webp` | ✅ |
+| `biomed-award-2024-packirisamy-photo` | Biomedical Awards — Dr Gopinath Packirisamy, 2024 | `/wp-content/uploads/2025/04/3-680ccca7cb0d5.webp` | `biomed-award-2024-packirisamy-photo.webp` | ✅ |
+| `biomed-award-2025-govindarajan-photo` | Biomedical Awards — Dr. Sutharsan Govindarajan, 2025 | `/wp-content/uploads/2026/04/dr-sutharsan-govindarajan-69e61c2788665-e1776830605840.webp` | `biomed-award-2025-govindarajan-photo.webp` | ✅ |
+| `agri-award-2021-kapuganti-photo` | Agricultural Awards — Dr. Jagadis Gupta Kapuganti, 2021 | `/wp-content/uploads/2023/03/Dr-Jagadis-Gupta-Kapugant.png` | `agri-award-2021-kapuganti-photo.png` | ✅ |
+| `agri-award-2022-lavanya-kumari-photo` | Agricultural Awards — Dr. P. Lavanya Kumari, 2022 | `/wp-content/uploads/2023/03/Dr.-P.-Lavanya-Kumari.png` | `agri-award-2022-lavanya-kumari-photo.png` | ✅ |
+| `agri-award-2022-mazumder-photo` | Agricultural Awards — Dr. Koushik Mazumder, 2022 | `/wp-content/uploads/2023/03/Dr.-Koushik-Mazumder.png` | `agri-award-2022-mazumder-photo.png` | ✅ |
+| `agri-award-2023-mandavgane-photo` | Agricultural Awards — Dr. Sachin A Mandavgane, 2023 | `/wp-content/uploads/2023/08/Sachin-Mandavgane-Professor-Dept-of-Chemical-Engineering-VNIT-Nagpur.jpg` | `agri-award-2023-mandavgane-photo.jpg` | ✅ |
+| `agri-award-2023-ambatipudi-photo` | Agricultural Awards — Dr. Srinivas Kiran Ambatipudi, 2023 | `/wp-content/uploads/2023/08/KA-Picture.jpg` | `agri-award-2023-ambatipudi-photo.jpg` | ✅ |
+| `agri-award-2023-dhir-photo` | Agricultural Awards — Dr. Sunny Dhir, 2023 | `/wp-content/uploads/2023/08/1.-Dr.-Sunny-Dhir-Project-Co-ordinator.jpg` | `agri-award-2023-dhir-photo.jpg` | ✅ |
+| `agri-award-2024-sailaja-photo` | Agricultural Awards — Dr B. Sailaja, 2024 | `/wp-content/uploads/2024/08/image20240831181241-66d30fd81c21c.webp` | `agri-award-2024-sailaja-photo.webp` | ✅ |
+| `agri-award-2024-jangir-photo` | Agricultural Awards — Dr Himanshi Jangir, 2024 | `/wp-content/uploads/2024/08/image20240831180230-66d30d8d6c621.webp` | `agri-award-2024-jangir-photo.webp` | ✅ |
+| `agri-award-2024-rasool-photo` | Agricultural Awards — Dr Shahid Rasool, 2024 | `/wp-content/uploads/2024/08/dr-shahid1-66d30d8c6107c-scaled.webp` | `agri-award-2024-rasool-photo.webp` | ✅ |
+| `agri-award-2025-chakrabarty-photo` | Agricultural Awards — Dr. Arindam Chakrabarty, 2025 | `/wp-content/uploads/2025/10/Arindam-profile-photo-scaled-e1759831051671.jpeg` | `agri-award-2025-chakrabarty-photo.jpeg` | ✅ |
+| `agri-award-2025-muthappa-photo` | Agricultural Awards — Dr. Senthil-Kumar Muthappa, 2025 | `/wp-content/uploads/2025/10/Muthappa-Senthil-Kumar-scaled.jpg` | `agri-award-2025-muthappa-photo.jpg` | ✅ |
+| `essay-contest-2021-book-cover` | Essay Contests — 1st thumbnail | `/wp-content/uploads/2023/03/Essay-Contest-Book-2021-Cover.jpg` (476×640) | `essay-contest-2021-book-cover.jpg` | ✅ |
+| `essay-contest-award-1-cover` | Essay Contests — 2nd thumbnail | `/wp-content/uploads/2023/03/Award-1.jpg` (476×640) | `essay-contest-award-1-cover.jpg` | ✅ |
+| `essay-contest-award-3-cover` | Essay Contests — 3rd thumbnail (DOM order is Cover→1→3→2, not sequential — preserved) | `/wp-content/uploads/2023/03/Award-3.jpg` (476×640) | `essay-contest-award-3-cover.jpg` | ✅ |
+| `essay-contest-award-2-cover` | Essay Contests — 4th thumbnail | `/wp-content/uploads/2023/03/Award-2.jpg` (476×640) | `essay-contest-award-2-cover.jpg` | ✅ |
+
+**Essay Contests PDF files** (not images — the 4 thumbnails above each link to one of these; hrefs
+are `#` in `sreepvf-essay-contests.html` until the real files are downloaded and dropped into the
+project, e.g. under a new `files/` folder, then wired to the matching `data-pdf-slot`):
+
+| `data-pdf-slot` | Source PDF (sreepvf.org) |
+|---|---|
+| `essay-contest-2021-book-pdf` | `https://sreepvf.org/wp-content/uploads/2023/03/Essay-Contest-Book-2021.pdf` |
+| `essay-contest-award-1-pdf` | `https://sreepvf.org/wp-content/uploads/2023/03/SPVF.pdf` |
+| `essay-contest-award-3-pdf` | `https://sreepvf.org/wp-content/uploads/2023/03/Awards-book-2019.pdf` |
+| `essay-contest-award-2-pdf` | `https://sreepvf.org/wp-content/uploads/2023/03/Awards-book-2018.pdf` |
+
+**Note on awardee names:** every awardee name on the live Biomedical/Agricultural Awards pages
+links to a per-year detail page (e.g. `/biomedical-research-grant-awardee-2019`). Those detail
+pages are out of scope for this pass — names are rendered as plain (non-link) text in
+`biomedical-awards.html`/`agricultural-awards.html` rather than pointing at pages that don't exist
+yet. Revisit if/when those detail pages get built.
+
 ## How to replace a placeholder
 
 1. Save the real file into `images/` using the recommended filename above (or your own — just keep it

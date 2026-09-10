@@ -1,0 +1,15 @@
+/* css/pages/sreepvf-essay-contests.css — page-unique overrides for sreepvf-essay-contests.html.
+   This page's title block is centered (unlike Biomedical/Agricultural Awards, which are
+   left-aligned) — confirmed against the live site, a genuine per-page difference, not an error;
+   handled with Bootstrap's own .text-center utility on the container in the HTML, no CSS needed.
+
+   Row of 4 clickable PDF-cover thumbnails — a pattern unique to this page. */
+.pdf-thumb {
+  display: block;
+}
+
+.pdf-thumb img {
+  width: 100%;
+  aspect-ratio: 476 / 640;
+  object-fit: cover;
+}

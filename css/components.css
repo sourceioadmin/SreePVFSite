@@ -87,6 +87,49 @@
   font-weight: 500;
 }
 
+/* Award entry — used by Biomedical Awards and Agricultural Awards (2+ pages): a full-width year
+   heading followed by a 50/50 photo+name / description row, repeated per awardee. Text here is
+   pure black (#000000) on the live site, distinct from the site's usual --color-text (#2B2B2B) —
+   kept as a deliberate one-off rather than silently reusing that token. Awardee names link to
+   per-year detail pages on the live site that are out of scope for this migration pass, so names
+   render as plain (non-link) text here rather than pointing at pages that don't exist yet. */
+
+.award-entry {
+  margin-bottom: var(--space-7);
+}
+
+.award-entry:last-child {
+  margin-bottom: 0;
+}
+
+.award-entry .award-year {
+  font-size: 28px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: var(--space-4);
+}
+
+.award-entry .award-photo {
+  width: 100%;
+  aspect-ratio: 248 / 245;
+  object-fit: cover;
+}
+
+.award-entry .award-name {
+  display: block;
+  font-size: 20px;
+  font-weight: 600;
+  color: #000;
+  margin-top: var(--space-3);
+}
+
+.award-entry .award-description {
+  font-size: 18px;
+  color: #000;
+  line-height: 1.42;
+  margin: 0;
+}
+
 /* Announcement ticker badge already covered in layout.css (.ticker-badge) */
 
 /* Read More link used inside cards */
