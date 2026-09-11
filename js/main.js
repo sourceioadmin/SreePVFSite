@@ -27,8 +27,11 @@ function applySiteConfig() {
 function markActiveNavLink() {
   const currentPage = (location.pathname.split("/").pop() || "index.html").toLowerCase();
   document.querySelectorAll(".main-nav a.nav-link, .main-nav .dropdown-item").forEach((link) => {
+    // Nav hrefs are root-relative (e.g. "/html/about-us.html") and can sit at a different depth
+    // than the page they're being matched against, so compare filenames, not full paths.
     const href = (link.getAttribute("href") || "").toLowerCase();
-    if (href === currentPage || (currentPage === "index.html" && href === "")) {
+    const hrefPage = href.split("/").pop();
+    if (hrefPage === currentPage || (currentPage === "index.html" && hrefPage === "")) {
       link.classList.add("active");
     }
   });
