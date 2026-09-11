@@ -1,0 +1,83 @@
+/* css/pages/events.css — single-event detail pages (event-ceremony-2023.html,
+   our-founders-were-recently-awarded-the-2025-dr-y-s-rajasekhara-reddy.html). The live site's
+   "sktevents" custom post type template: title, a calendar/location meta row, then a single
+   full-width article column with a left-floated featured image (WordPress's "alignleft" class)
+   that body text wraps around — no sidebar, unlike the blog's singular-post template. */
+
+.event-detail-title {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: var(--space-2);
+}
+
+.event-detail-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  font-size: 14px;
+  color: var(--color-text);
+  margin-bottom: var(--space-4);
+}
+
+.event-detail-meta-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.event-detail-meta-item i {
+  color: var(--color-accent);
+}
+
+.event-detail-body {
+  overflow: hidden; /* clearfix for the floated featured image */
+}
+
+.event-detail-body a {
+  color: var(--color-accent);
+}
+
+.event-detail-image {
+  float: left;
+  width: 260px;
+  max-width: 40%;
+  height: auto;
+  margin: 0 var(--space-4) var(--space-3) 0;
+}
+
+.event-detail-body p {
+  margin-bottom: var(--space-3);
+}
+
+.event-detail-inline-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: var(--space-3) 0;
+}
+
+@media (max-width: 575.98px) {
+  .event-detail-image {
+    float: none;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 0 var(--space-3) 0;
+  }
+}
+
+/* Small 2-image "glimpses" slider near the end of the 2023 ceremony post — the live site uses a
+   MetaSlider widget at a fixed 500x600 box; rebuilt as a Bootstrap carousel at the same size. */
+.event-detail-gallery {
+  width: 100%;
+  max-width: 500px;
+}
+
+.event-detail-gallery .carousel-inner {
+  aspect-ratio: 500 / 600;
+}
+
+.event-detail-gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

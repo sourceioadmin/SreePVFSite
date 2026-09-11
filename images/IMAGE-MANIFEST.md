@@ -27,8 +27,8 @@ without re-auditing the page.
 | `mission-photo` | "Our Mission at SreePVF" | `/wp-content/uploads/2023/03/Screenshot-2023-03-03-145714.remini-enhanced.jpg` | `mission-community-photo.jpg` | ✅ |
 | `founders-photo` | "Meet the Founders" | `/wp-content/uploads/2023/03/Image20230309121004.png` | `founders-photo.png` | ⚠️ two similar candidates on the page (also `SreePVF-1024x1024.png`); verify |
 | `testimonial-avatar-1` through `testimonial-avatar-5` | Decorative avatar cluster beside the testimonial carousel | not captured — the five circular photos are a decorative composition, not 1:1 tied to carousel slide index | `testimonial-avatar-1.jpg` … `5.jpg` | ⚠️ verify against live page (people are, in slide order: Dr Ramesh V Sonti, Prof. L S Shashidhara, Prof. D Balasubramanian, Dr. Chadalawada Sudha, Dr. Chadalawada Nageswara Rao) |
-| `event-card-1-image` | Upcoming Events slide 1 (also reused on `events.html` — the live site's `/events/` page is the exact same "Upcoming Events" widget, just its own standalone page) | `/wp-content/uploads/2025/09/YSR-Award-Photograph.jpeg` (1080×1350) | `event-ysr-memorial-award.jpeg` | ✅ |
-| `event-card-2-image`, `event-card-3-image`, `event-card-4-image` | Upcoming Events slides 2–4 (also reused on `events.html`) | `/wp-content/uploads/2023/03/Image20230406125903.png` (688×443, same file on all three) | `event-research-award-ceremony-2023.png` | ✅ |
+| `event-card-1-image` | Upcoming Events slide 1 (also reused on `events.html` — the live site's `/events/` page is the exact same "Upcoming Events" widget, just its own standalone page). Links to the real event detail page, `our-founders-were-recently-awarded-the-2025-dr-y-s-rajasekhara-reddy.html` | `/wp-content/uploads/2025/09/YSR-Award-Photograph.jpeg` (1080×1350) | `home-page-images/YSR-Award-Photograph.jpeg` | ✅ |
+| `event-card-2-image` | Upcoming Events slide 2 (also reused on `events.html`). Links to `award-ceremony-2023.html`. Confirmed against the live site that the "sktevents" custom post type has only these 2 real entries — earlier drafting duplicated this slide into `event-card-3-image`/`event-card-4-image` to fill out 4 carousel slots; those duplicate slides were deleted from both `index.html` and `events.html` | `/wp-content/uploads/2023/03/Image20230406125903.png` (688×443, cropped/thumbnail version — the same asset also used full-size as `event-detail-2023-featured` below) | `home-page-images/upcoming-events-image1.png` | ✅ |
 | `news-card-1-image` | "Translation Accelerator – Day 2 Plenary" | `/wp-content/uploads/2026/09/day-2-plenary-6aa1123b702fa-212x300.webp` | `news-translation-accelerator-day2.webp` | ✅ |
 | `news-card-2-image` | "Translation Accelerator – Day 1 Plenary" | `/wp-content/uploads/2026/09/day-1-plenary-6aa1121e01d16-212x300.webp` | `news-translation-accelerator-day1.webp` | ✅ |
 | `news-card-3-image` | Prof. Sachin Mandavgane / P. K. Bose award | `/wp-content/uploads/2026/09/sachin-pk-bose-memorial-award-6a96a632aec7f-212x300.webp` | `news-pk-bose-award-2025.webp` | ✅ |
@@ -298,6 +298,28 @@ Archives/Categories sidebar widgets on these pages reproduce the live site's lis
 (month/category names) as plain text rather than links — the live site's archive-by-date and
 archive-by-category pages are out of scope for this migration (no such pages exist here), same
 treatment as the disabled Search widget on `blog.html`.
+
+## Image manifest — Individual event detail pages
+
+Two singular-event pages, matching the live "sktevents" custom post type template (title,
+calendar/location meta, single full-width column with the featured image floated left and body
+text wrapping around it — no sidebar, unlike blog posts). Confirmed directly against the live site
+that these are the only 2 real events; the Upcoming Events carousels on `index.html` and
+`events.html` previously had 2 duplicate slides of the 2023 ceremony, now removed (see the
+`event-card-2-image` note above).
+
+| Slot | Description | Live source URL | Local file | Status |
+|---|---|---|---|---|
+| `event-detail-ysr-photo` | `our-founders-were-recently-awarded-the-2025-dr-y-s-rajasekhara-reddy.html` — floated featured photo (reuses the same file already used as `event-card-1-image`) | `/wp-content/uploads/2025/09/YSR-Award-Photograph.jpeg` | `home-page-images/YSR-Award-Photograph.jpeg` | ✅ |
+| `event-detail-2023-featured` | `award-ceremony-2023.html` — floated featured photo | `/wp-content/uploads/2023/03/Image20230406125903.png` (full size, not the 300×193 thumbnail used elsewhere) | `events/award-ceremony-2023-featured.png` | ✅ |
+| `event-detail-2023-jitendra-singh` | `award-ceremony-2023.html` — in-body photo of Dr. Jitendra Singh addressing the ceremony | `/wp-content/uploads/2023/04/img-20230403-wa0077.webp` | `events/award-ceremony-2023-jitendra-singh.webp` | ✅ |
+| `event-detail-2023-audience` | `award-ceremony-2023.html` — in-body audience photo | `/wp-content/uploads/2023/03/Image20230406130151.png` | `events/award-ceremony-2023-audience.png` | ✅ |
+| `event-detail-2023-press-coverage` | `award-ceremony-2023.html` — PIB news-clipping scan ("India's StartUps setting global benchmarks") | `/wp-content/uploads/2023/04/Press-coverage.jpg` | `events/award-ceremony-2023-press-coverage.jpg` | ✅ |
+| `event-detail-2023-gallery-1`, `event-detail-2023-gallery-2` | `award-ceremony-2023.html` — 2-image "glimpses of the event" slider (live site uses a MetaSlider widget at a fixed 500×600 box; rebuilt as a Bootstrap carousel at the same size, per WEBSITE-STANDARDS.md functional-equivalence guidance) | `/wp-content/uploads/2023/04/Image20230412132602-500x600.jpg`, `.../Image20230412132551-500x600.jpg` | `events/award-ceremony-2023-gallery-1.jpg`, `events/award-ceremony-2023-gallery-2.jpg` | ✅ |
+
+The live 2023 ceremony post also links out to an external PIB press-release URL and to
+`/picture-gallery/` ("You can catch some glimpses of the event here") — the PIB link is kept as a
+real external link, and the picture-gallery link now points at our own `picture-gallery.html`.
 
 ## How to replace a placeholder
 
