@@ -274,6 +274,31 @@ Note: the live site's 4th blog post ("SreePVF is organising the Translation Acce
 this year at NCBS.") genuinely has no featured image — confirmed via DOM inspection, not an
 oversight — so its card is reproduced without a thumbnail.
 
+## Image manifest — Individual blog post pages
+
+Four singular-post pages, matching the live site's post template (title, meta, body, in-content
+image where the live post has one, tag, Previous/Next post nav) — one page per URL the client
+supplied. Live prev/next nav is scoped to same-category posts; targets outside these 4 (an older
+"Latest Announcement" post and an older "News" post) are out of scope for this migration and were
+omitted rather than linked to non-existent pages, per the same approach used for out-of-scope
+awardee-detail links in `award-entry` (components.css).
+
+| Slot | Description | Live source URL | Local file | Status |
+|---|---|---|---|---|
+| `blog-post-ncbs-poster` | `sreepvf-is-organising-the-translation-accelerator-meeting-this-year-at-ncbs.html` — in-body poster image (this post has no Prev/Next nav on the live site — its only nav target is an out-of-scope older post) | `/wp-content/uploads/2026/09/research-translation-accelerator-poster-6a96a5323c3f4-724x1024.webp` | `blog/research-translation-accelerator-poster.webp` | ✅ |
+| (none) | `congratulations-to-prof-sachin-mandavgane-on-receiving-the-professor-p-k-bose-memorial-award-2025.html` — genuinely has no body image on the live singular template (its grid thumbnail, `blog-post-3-image`, is used only in the nav-box on Day 1 Plenary's page, reused as-is) | — | — | ✅ (confirmed no image) |
+| `blog-post-day1-image` | `translation-accelerator-day-1-plenary.html` — in-body plenary poster | `/wp-content/uploads/2026/09/day-1-plenary-6aa1121e01d16-724x1024.webp` (larger size than the `blog-post-2-image` grid thumbnail) | `blog/day-1-plenary-large.webp` | ✅ |
+| `blog-post-day2-image` | `translation-accelerator-day-2-plenary.html` — in-body plenary poster | `/wp-content/uploads/2026/09/day-2-plenary-6aa1123b702fa-724x1024.webp` (larger size than the `blog-post-1-image` grid thumbnail) | `blog/day-2-plenary-large.webp` | ✅ |
+
+Post-nav thumbnails (the small 70×70 Previous/Next post images) reuse the existing grid-thumbnail
+files (`day-1-plenary.webp`, `day-2-plenary.webp`, `sachin-pk-bose-memorial-award.webp`) already
+listed above rather than downloading separate copies of the live site's own 150×150 nav thumbnails.
+
+Archives/Categories sidebar widgets on these pages reproduce the live site's list content
+(month/category names) as plain text rather than links — the live site's archive-by-date and
+archive-by-category pages are out of scope for this migration (no such pages exist here), same
+treatment as the disabled Search widget on `blog.html`.
+
 ## How to replace a placeholder
 
 1. Save the real file into `images/` using the recommended filename above (or your own — just keep it
